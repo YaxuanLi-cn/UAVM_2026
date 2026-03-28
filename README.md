@@ -105,4 +105,14 @@ cd ..
 
 ### 3.3 Evaluate Results
 
+The final evaluation is conducted on **CodaBench**.  
+After generating your test predictions, please package the submission files according to the competition requirements and upload them to:
+
+**https://www.codabench.org/competitions/15251/**
+
+> **Note**
+> - The official test results are only available through the CodaBench evaluation server.
+> - Please make sure your submission file strictly follows the format required by the competition page.
+> - Local validation can be used for debugging, but the leaderboard scores on CodaBench are the final results used for comparison.
+
 ---
