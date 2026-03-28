@@ -1,0 +1,41 @@
+# DreamNav Environment Requirements
+
+numpy==1.26.4
+Pillow
+tqdm
+
+# Deep Learning
+pytorch-lightning==1.5.0
+einops==0.3.0
+timm==0.6.12
+kornia==0.6
+torchmetrics==0.6.0
+
+# Transformers & HuggingFace
+transformers==4.37.2
+huggingface_hub
+safetensors>=0.4.1
+open_clip_torch==2.0.2
+
+# Computer Vision
+opencv-contrib-python>=4.5.5
+albumentations==1.3.0
+imageio==2.9.0
+imageio-ffmpeg==0.4.2
+
+# Config & Utilities
+omegaconf==2.1.1
+test-tube>=0.7.5
+addict==2.4.0
+yapf==0.32.0
+prettytable==3.6.0
+
+# Web & Visualization (optional, for gradio demo)
+gradio==3.16.2
+streamlit==1.12.1
+streamlit-drawable-canvas==0.8.0
+webdataset==0.2.5
+invisible-watermark>=0.1.5
+
+# Image processing
+basicsr==1.4.2
