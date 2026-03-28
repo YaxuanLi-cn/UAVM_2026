@@ -1,4 +1,4 @@
-<h1 align="center">Last-Meter Precision Navigation for UAVs</h1>
+<h1 align="center">UAVs in Multimedia: Capturing the World from a New Perspective (UAVM 2026)</h1>
 
 
 <p align="center">
@@ -7,9 +7,9 @@
     <img src="https://img.shields.io/badge/Dataset-HF%20Data-d8b04c?style=for-the-badge" alt="Dataset">
   </a>
 
-  <!-- Paper -->
-  <a href="https://your-paper-link-here">
-    <img src="https://img.shields.io/badge/Paper-arXiv-d46a5a?style=for-the-badge" alt="Paper">
+  <!-- Workshop -->
+  <a href="https://www.zdzheng.xyz/ACMMM2026Workshop-UAV/">
+    <img src="https://img.shields.io/badge/Workshop-Page-d46a5a?style=for-the-badge" alt="Workshop">
   </a>
 
   <!-- Email -->
@@ -52,7 +52,6 @@ pip install -r requirements.txt
 
 # Download pretrained models
 huggingface-cli download Ramos-Ramos/dino-resnet-50 --local-dir models/dino_resnet
-huggingface-cli download Boese0601/MagicDance control_sd15_ini.ckpt --local-dir models/controlnet
 ```
 
 ---
@@ -75,7 +74,7 @@ cd ..
 
 This script downloads the dataset from HuggingFace and extracts train/test/tours data to the `pairUAV/` directory.
 
-## 3. Baseline
+## 3. SuperGlue-Based Baseline
 
 ### 3.1 Run SuperGlue Feature Matching
 
@@ -84,19 +83,15 @@ First, perform feature matching on image pairs:
 ```bash
 cd baseline/SuperGlue
 
-# 运行总共需要6h，你也可以通过以下方式直接下载我们运行好的结果
+# Running everything takes about 6 hours in total. You can also directly download the results we have already generated using the following method.
 bash download_results.sh
-
-# Or Run feature matching
-bash run_train.sh
-
-python gen_test_pairs.py
-bash run_test.sh
-python reorganize_matches.py
-
-rm -rf origin_test_matches_data
 cd ..
 
+# Or Run feature matching
+python gen_test_pairs.py
+bash run_train.sh
+bash run_test.sh
+cd ..
 ```
 
 This generates matching results in `train_matches_data/` and `test_matches_data/`.
@@ -104,9 +99,10 @@ This generates matching results in `train_matches_data/` and `test_matches_data/
 ### 3.2 Train Model
 
 ```bash
-cd step1
 bash run.sh
 cd ..
 ```
+
+### 3.3 Evaluate Results
 
 ---
