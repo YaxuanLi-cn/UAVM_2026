@@ -21,6 +21,4 @@ python train.py \
     --train_match_dir $TRAIN_MATCH \
     --test_image_dir $TEST_IMAGE \
     --test_json_dir $TEST_JSON \
-    --test_match_dir $TEST_MATCH \
-    --train_path "$TRAIN_PATH" \
-    --test_path "$TEST_PATH" 
+    --test_match_dir $TEST_MATCH 
